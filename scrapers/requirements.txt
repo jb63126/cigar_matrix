@@ -1,0 +1,7 @@
+scrapy
+selenium
+# selenium==3.14.0
+undetected_chromedriver
+webdriver_manager
+pymongo
+scrapy-selenium

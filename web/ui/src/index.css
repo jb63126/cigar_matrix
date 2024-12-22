@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
+  /* color: #393E46; */
+}
+
+.search-field {
+  background: white;
+  border: none;
+}
+
+.btn {
+  background: #00ADB5 !important;
+  border-radius: 30px !important;
+  border: none !important;
+  padding: 0 30px !important;
+}
+
+/* 
+grey  - EEEEEE
+teal - 00ADB5
+light-black - 393E46
+dark - 222831
+*/

@@ -1,0 +1,17 @@
+button {
+    background-color: skyblue;
+    border: 0;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+input {
+    border-radius: 20px;
+    padding: 10px;
+}
+
+ul {
+    /* background-color: whitesmoke; */
+    list-style-type: none;
+}
