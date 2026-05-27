@@ -52,6 +52,11 @@ class CigarScraperPipeline:
         # c = b.as_integer_ratio()
         # print(str(Fraction(b).limit_denominator()))
 
+        # Drop samplers
+        name_lower = (adapter.get('name') or '').lower()
+        if any(kw in name_lower for kw in self.sampler_keywords if hasattr(self, 'sampler_keywords')):
+            raise DropItem(f'SAMPLER DROPPED: {item}')
+
         if not adapter.get('name') \
             or (not adapter.get('brand') and not adapter.get('origin') \
                 and not adapter.get('shape') and not adapter.get('strength') \
@@ -114,7 +119,12 @@ class MongoPipeline:
             'jrcigars': 'JR Cigars',
             'foxcigar': 'Fox Cigar',
             'famous_smoke': 'Famous Smoke',
+            'bestcigar_prices': 'Best Cigar Prices',
         }
+        self.sampler_keywords = [
+            'sampler', 'bundle', 'variety', 'assortment', 'mix',
+            'collection', 'starter', 'gift set', 'intro', 'taster',
+        ]
 
     @classmethod
     def from_crawler(cls, crawler):

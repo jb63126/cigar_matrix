@@ -1,10 +1,18 @@
 
 
 export const apiRoutes = {
+    // Legacy single-retailer routes
     suggestions: '/cigar/suggestions',
     search: '/cigar/search',
     filters: '/cigar/filters',
     getCigarById: '/cigar',
+
+    // Cross-retailer price comparison routes
+    compareSuggestions: '/compare/suggestions',
+    compareSearch: '/compare/search',
+    compareFilters: '/compare/filters',
+    compareById: '/compare',
+    normalize: '/compare/normalize',
 }
 
 export const environment = process.env.NODE_ENV === 'production' ?
