@@ -120,6 +120,7 @@ class MongoPipeline:
             'foxcigar': 'Fox Cigar',
             'famous_smoke': 'Famous Smoke',
             'bestcigar_prices': 'Best Cigar Prices',
+            'cigarfinder': 'CigarFinder',
         }
         self.sampler_keywords = [
             'sampler', 'bundle', 'variety', 'assortment', 'mix',
